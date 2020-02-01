@@ -1,2 +1,5 @@
 <!--page/home/home.wxml-->
 <text class="title">Hello World</text>
+
+
+<view>tag02</view>
