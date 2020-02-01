@@ -1,0 +1,6 @@
+/* page/home/home.wxss */
+.title {
+  font-size: 30px;
+  font-weight: bolder;
+  color:lightblue
+}
