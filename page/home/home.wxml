@@ -1,2 +1,28 @@
 <!--page/home/home.wxml-->
-<text class="title">Hello World</text>
+<!-- 数据绑定 -->
+<view class="title">Hello {{name}}</view>
+<view class="title">年龄：{{age}}</view>
+
+<!-- 循环 -->
+<view wx:for="{{students}}">
+  {{item.name}}-{{item.tool}}
+</view>
+
+<!-- 绑定事件 -->
+<view>counter: {{counter}}</view>
+<button size="mini" bindtap="add">+</button>
+<button size="mini" bindtap="sub">-</button>
+
+<view>
+  <button size="mini" open-type="getUserInfo" bindgetuserinfo="getUser">
+  获取用户信息
+  </button>
+</view>
+
+
+<view>
+  <open-data type="userNickName"></open-data>
+</view>
+<view>
+  <open-data type="userProvince"></open-data>
+</view>

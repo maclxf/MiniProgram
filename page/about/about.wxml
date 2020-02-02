@@ -1,2 +1,10 @@
 <!--page/about/about.wxml-->
-<text>page/about/about.wxml</text>
+<view>名字：{{name}}</view>
+<view>省份：{{province}}</view>
+
+
+
+<view wx:for="{{goods}}">{{item.name}}</view>
+<view wx:for="{{goods}}">{{item.name}}</view>
+<view wx:for="{{goods}}">{{item.name}}</view>
+<view wx:for="{{goods}}">{{item.name}}</view>
