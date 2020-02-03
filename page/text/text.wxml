@@ -1,0 +1,154 @@
+<!--page/text/text.wxml-->
+<!-- <wxs module="priceData">
+  var price = 26.27889;
+
+  function formatePrice(price) {
+    return price.toFixed(2)
+  }
+
+  module.exports = {
+    price: price,
+    formatePrice: formatePrice
+  }
+</wxs> -->
+
+<wxs src="../../wxs/utils.wxs" module="priceData"/>
+
+<view>{{priceData.formatePrice(priceData.price)}}</view>
+
+
+
+
+<view>------------------</view>
+
+
+
+
+<view>
+  <text>{{name ? name : '---' }}</text>
+  <text>{{ft_play}}</text>
+</view>
+
+<view>
+  <text>成绩:</text> {{point}}
+  <view wx:if="{{point > 80}}">良好</view>
+  <view wx:elif="{{point > 60}}">及格</view>
+  <view wx:else>不及格</view>
+  <button size="mini" bindtap="addPoint">加分</button>
+</view>
+
+<view>------------------</view>
+
+<view>
+  <view class="{{isActive ? 'red' : ''}}">我是什么颜色</view>
+  <button size="mini" bindtap="changeColor">点击换颜色</button>
+</view>
+
+<view>------------------</view>
+
+<block>
+  <view wx:for="{{moives}}" wx:key="item" wx:for-item="moive" wx:for-index="i">{{moive}} - {{i}}</view>
+</block>
+
+<button size="mini" bindtap="addMoive">加部电影</button>
+
+<view>------------------</view>
+
+<template name="tplTest">
+  <text>{{textStr}}</text>
+  <view>view</view>
+</template>
+
+<template is="tplTest" data="{{textStr: 'gogo'}}" />
+<template is="tplTest" data="{{textStr: 'fire'}}" />
+<template is="tplTest" data="{{textStr: 'in hole'}}" />
+
+
+
+<view>------------------</view>
+
+<text>hello \n world</text>
+<text>小程序</text>
+<text selectable>kkkppp</text>
+<view>------------------</view>
+
+<view>
+  <button size="mini">小按钮</button>
+  <view>
+    <button size="mini" type="primary">primary</button>
+    <button size="mini" type="default">default</button>
+    <button size="mini" type="warn">warn</button>
+  </view>
+
+  <view>
+    <button size="mini" type="primary" loading>loading</button>
+
+  </view>
+
+  <button size="mini" hover-class="pressed" class="bg-orange">
+    hover-class
+  </button>
+
+  <button size="mini" plain>镂空</button>
+
+</view>
+
+<view>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+  <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+    <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">
+        <view>实时搜索文本</view>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view>
+  <view class="box1">box1-px</view>
+  <view class="box2">box2-rpx</view>
+
+  <view>
+    <view class="text1">px text1 string</view>
+
+    <view class="text2">px text2 string</view>
+  </view>
+</view>
+
+
+
+<view>
+  <image src="http://file02.16sucai.com/d/file/2015/0128/8b0f093a8edea9f7e7458406f19098af.jpg" mode="widthFix" binderror="onError" bindload="onImgReady" />
+  <image src="/assets/images/123.jpeg" />
+  <button bindtap="chooseImage">选照片</button>
+</view>

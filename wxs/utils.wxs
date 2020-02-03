@@ -1,0 +1,10 @@
+var price = 27.298;
+
+function formatePrice(price) {
+  return price.toFixed(2)
+}
+
+module.exports = {
+  price: price,
+  formatePrice: formatePrice
+}

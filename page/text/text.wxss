@@ -1,0 +1,54 @@
+/* page/text/text.wxss */
+@import '/assets/wxss/weui-searchbar.wxss';
+
+.bg-orange {
+  background-color: orange
+}
+
+.pressed {
+  background-color: red
+}
+
+.red {
+  color: red
+}
+
+/* input {
+  margin: 30px;
+  border: 1px solid orange
+} */
+
+.box1 {
+  height: 200px;
+  width: 200px;
+  background: lightblue
+}
+
+.box2 {
+  height: 400rpx;
+  width: 400rpx;
+  background: lightcoral
+}
+
+.text1 {
+ font-size: 20px;
+ color: lightgreen
+}
+.text2 {
+  font-size: 40rpx;
+  color: lightpink
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result .weui-cell__bd{
+  padding: 2px 0 2px 20px;
+  color: #666;
+}
+.searchbar-result:before{
+    display: none;
+}
+
+
+
