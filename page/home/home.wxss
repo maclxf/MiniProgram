@@ -4,3 +4,25 @@
   font-weight: bolder;
   color:lightblue
 }
+
+.tarbar {
+  height: 120rpx;
+  display: flex;
+  line-height: 120rpx;
+}
+
+.tarbar .item {
+  flex: 1;
+  text-align:center;
+}
+
+.active text {
+  color:#ff7775;
+  padding: 10rpx 20rpx;
+  border-bottom: 10rpx solid #ff7775
+  
+}
+
+.w-tarbar {
+  margin-top: 60rpx
+}

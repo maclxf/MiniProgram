@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-tarbar": "/components/w-tarbar/w-tarbar",
+    "tarbar-item":"/components/w-tarbar-item/w-tarbar-item"
+  }
 }

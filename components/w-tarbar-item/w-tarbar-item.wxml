@@ -1,0 +1,2 @@
+<!--components/w-tarbar-item.wxml-->
+<view bindtap="clickItem"><text>{{title}}</text></view>

@@ -1,2 +1,16 @@
 <!--page/home/home.wxml-->
 <text class="title">Hello World</text>
+
+
+<view class="tarbar">
+  <block wx:for="{{types}}" wx:key="i" wx:for-item="type" wx:for-index="i">
+    <tarbar-item class="item {{currentIndex == i ? 'active' : ''}}" 
+                 index="{{i}}" 
+                 title="{{type}}"
+                 bind:doAcrtive="setAcrtive" />
+  </block>
+</view>
+
+<view>---------------------</view>
+
+<w-tarbar bind:send="sendFrom" types="{{types}}" />

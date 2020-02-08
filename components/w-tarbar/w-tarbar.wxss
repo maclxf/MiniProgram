@@ -1,0 +1,21 @@
+/* components/w-tarbar/w-tarbar.wxss */
+.container {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.sub {
+  flex: 1;
+  text-align: center
+}
+
+.active {
+  color:aqua;
+  
+}
+
+.active text {
+  padding: 20rpx 20rpx;
+  border-bottom:10rpx solid aqua
+}

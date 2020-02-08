@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    types: ['流行', '潮流', '另类'],
+    currentIndex: 0
   },
 
   /**
@@ -62,5 +63,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  setAcrtive(event) {
+    this.setData({
+      currentIndex: event.detail
+    })
+  },
+  sendFrom(event) {
+    console.log(event)
   }
 })
